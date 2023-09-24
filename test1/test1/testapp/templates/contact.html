@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+
+
+{% block content %}
+<div class="container mb-5">
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 text-center my-auto">
+            <div class="toast bg-light text-black fade show">
+                <div class="toast-header bg-light text-black">
+                    <strong class="me-auto"><i class="bi-gift-fill"></i> HOPE YOU ENJOYED OUR WEBSIDE SO FAR</strong>
+                    <small>10 mins ago</small>
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body">
+                    <p> If you want to know about our latest updates subscribe at the end of the page/footer</p>
+                </div>
+            </div>
+            <div class="toast bg-light text-black fade show">
+                <div class="toast-header bg-light text-black">
+                    <strong class="me-auto"><i class="bi-gift-fill"></i> IF YOU WANT MORE INFORMATION ABOUT SOMETHING CONTACT US</strong>
+                    <small>1 second ago</small>
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body">
+                    <p> We will make sure to answer you and this way you can also book your trip</p>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-12 col-md-8 " style="background-color: #AFCCD0">
+            <form action="" method="POST" class="p-5">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" name="firstName" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <label for="surname" class="form-label">Surname</label>
+                    <input type="text" name="lastName" class="form-control" id="surname" placeholder="Your surname">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Comment</label>
+                    <textarea class="form-control" name="comment" id="comment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn  text-light" style="color: white;font-weight: 500;">Submit</button>
+            </form>
+        <div class="mb-6">
+            <img src="" class="img-fluid" alt="">
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

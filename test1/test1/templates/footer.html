@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<footer class="border-top py-5">
+    <div class="container py-5">
+        <div class="row ">
+            <div class="col-sm-12 col-md-6 col-lg-4 footer_text ">
+                <h3 class="fs-3 fw-bold"><a href="{% url 'home' %}" class="text-decoration-none" style="color: white;">ZETTA TRAVEL AND RENT A CAR</a>
+
+                </h3>
+                <p >NE JEMI NJE KOMPANI E PERKUSHTUAR PER TJU OFRUAR NJE UDHETIM SA ME TE SIGURT BIZNESI APO PUSHIMESH. OFROJM UDHETIME NGA SHQIPERIA NE VENDET FQINJE.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-content-center
+                ">
+                <div>
+                    <h3 class="ps-5">Kompania</h3>
+                    <ul class="list-unstyled ps-5 lh-lg">
+                        <li><a href="{% url 'about' %}" class="text-decoration-none" style="color: white;">Rreth nesh</a></li>
+                        <li><a href="#ServiceSS" class="text-decoration-none " style="color: white;">Serviset</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-content-center ">
+                <div>
+                    <h3 class="ps-5">Suport</h3>
+                    <ul class="list-unstyled ps-5 lh-lg">
+                        <li><a href="{% url 'contact' %}" class="text-decoration-none "style="color: white;">Na kontaktoni</a></li>
+                        <li><p class="text-decoration-none" style="font-style:italic ;"style="color: white;">Subscribe for our newsletter</p>
+                        <form action="" method="POST" class="">
+                            {% csrf_token %}
+                       <div >
+                        <input id="name" name="name" class="form-control" placeholder="Your Name"/>
+                       </div>
+                       <div >
+                        <input id="email" name="email" type="email" class="form-control" placeholder="Email address"/>
+                       </div>
+
+                       <div>
+                        <button type="submit" class="btn btncolor" style="color: white;">
+                            <i class="fa fa-arrow-circle-right fa-lg" ></i>
+                        </button>
+                       </div>
+                       </form>
+                      </li>
+                    </ul>
+
+                    {% load static %}
+                    <div class="social text-dark ps-5 medium-icon">
+                        
+                        <i class="fab fa-instagram ms-2 p-2 bg-light rounded-circle"><a href="https://www.instagram.com/zettarent.al/" target="_blank"></a> <img src=" " width="27px" > </i>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

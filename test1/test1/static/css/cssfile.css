@@ -1,0 +1,100 @@
+#navbutton{
+    background-color: white;
+    color: #0d105d;
+    border: 3px solid #0d105d;
+    /* padding: 10px 40px; */
+    cursor: pointer;
+}
+.navbar-brand{
+  text-transform: uppercase;
+}
+#navbutton:hover{
+    
+    background-color: #b0c9ef;
+    color: #000;
+    border: 3px solid #145a9b;
+}
+
+.section1{
+  background-attachment: fixed;
+}
+.rounded-circle{
+  width: 31px;
+    height: 33px;
+    padding-left: 0.7rem;
+}
+
+.oferta_img {
+  height: 500px;
+     object-fit:cover;
+   background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+}
+.foto{
+   
+        font-size: 1rem; 
+        color: #f0f8ff;
+        background-image: linear-gradient(rgba(65, 62, 64, 0.692), rgba(62, 60, 61, 0.452)), url("../img/firstphoto.jpg");
+        height: 93vh;
+}
+
+#a{
+    
+        font-size: 10rem; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* img {
+  width: 100%;
+  object-fit: cover;
+} */
+a {
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+#banner > div,
+#service-1 > div,
+#service-2 > div {
+  margin: auto;
+  padding: 0 20% 0 0;
+}
+section > img {
+  padding: 40px 0;
+}
+#service-1 > div {
+  padding: 0 0 0 20%;
+}
+
+#services > div:hover i,
+#services > div:hover a {
+  color: #fff;
+}
+span {
+  color: #fca311;
+}
+div > p {
+  margin: 20px 0 40px;
+}
+ 
+footer{
+  background-color: #333690;
+  color: #fff;
+  width: 100%;
+ 
+}
+.footer_text{
+   text-align: center;
+}

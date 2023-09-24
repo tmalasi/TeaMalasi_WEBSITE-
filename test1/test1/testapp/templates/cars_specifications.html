@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+ 
+<div class="container mb-5">
+    <div class="row mt-5">
+        <div class="col-12 col-md-6 p-5 my-auto" style="background-color: #e8d5b53b;">
+            <h4 class="fw-light">More Information</h4>
+            <h3 class="fs-1">{{carDetail.product_name}}</h3>
+            <!-- <p class="fs-3 fw-light"></p> -->
+            <div class="d-flex justify-content-around">
+                  <p class="fw-light fs-4">{{carDetail.product_comment}}</p>
+                  </div><div>
+                <p>Color : {% for color in carDetail.product_color.all %} {{color}} {% endfor %}</p>
+           </div>
+           <div class="col-12 col-md-6 d-flex justify-content-center align-content-center">
+            <img src="{{carDetail.product_image.url}}" class="img-fluid" alt="">
+           </div>
+        </div>
+        <div class="col-12 col-md-6  my-auto">
+            <h4 > Interior pictures</h4>
+            <div class="row  text-center ">
+                <div class="col-12 ">
+              
+                    <img  height="420px" src="{{carDetail.product_interior1.url}}" class="card-img-top " alt="...">
+                  </div>
+               
+                <div class="col-12 mt-5n">
+                    <img  height="420px" src="{{carDetail.product_interior2.url}}" class="card-img-top" alt="...">
+                  </div>
+                  </div>
+            
+                </div>
+              </div>
+              </div>
+    </div>
+   </div>
+
+{% endblock %}

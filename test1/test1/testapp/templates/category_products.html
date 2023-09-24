@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!-- banner-->
+<div class="container-fluid position-relative p-0  ">
+    <div class="cover">
+        <img src="{{category.category_image.url}}" alt="" class="img-fluid">
+    </div>
+    <div class="info-cover position-absolute w-50 top-50 start-50 translate-middle text-center">
+        <h2 class="fw-light text-white fs-1 mb-5">Find the best {{category.category_name}}
+        </h2>
+        <h1 class="fs-1 text-white mb-5 pb-5" style="font-family: italic;">Book now your trip</h1>
+    </div>
+</div>
+<!-- fund banner -->
+<!-- Category product -->
+<div class="container my-5 pt-5">
+    <div class="my-5 text-center">
+        <h2 class="fs-1" style="font-style: italic;">Our {{category.category_name}}</h2>
+    </div>
+        <div class="row container-fluid text-center">
+          {% for pro in pro_cat %}
+            <div class="col-12 col-md-6 col-lg-3 mt-5">
+            <div class="card" style="width: 18rem;">
+                <img  height="420px" src="{{pro.product_image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{pro.product_name}}</h5>
+                  <p class="card-text">{{pro.product_review|safe}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{pro.product_year}}</li>
+                </ul>
+                <div class="card-body">
+                  <a href="../cars_specifications/{{pro.product_id}}" class="btn   mt-3" style="background-color: rgb(1, 1, 200);color: white;"><i
+                    class="fas fa-chevron-right"></i></a>
+                </div>
+              </div></div>
+        <!-- fund chair 1 -->
+        {% endfor %}
+
+    </div>
+   </div>
+
+<!-- fund Category product -->
+{% endblock %}

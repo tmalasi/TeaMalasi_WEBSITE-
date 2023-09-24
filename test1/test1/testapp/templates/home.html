@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+   
+
+    {% block content %}
+    {% load static %}
+ 
+     <section class="section1 mt-0 mb-0 pb-0">
+        <div class="gray_layer position-relative">
+        <img src="{% static '/images/firstphoto.jpg' %}" class="img-fluid oferta_img w-100" alt="fotoja e pare">
+        </div>
+        <div class="row position-absolute top-50 start-50 translate-middle">
+        <div class="text-center  first_text " style="color: rgb(204, 141, 38);">
+        <h3 class="display-3 fw-bold ">ZETTA TRAVEL</h3>
+        <p class="mb-0 h5 " >Travel Service And Rent A Car</p>
+        </div>
+        </div>
+        </section>
+     
+     <div class="row container text-center my-5">
+        {% for car in cars %}
+        <div class="col-12 col-md-6 col-lg-3 mt-5">
+        <div class="card" style="width: 18rem;">
+            <img  height="420px" src="{{car.product_image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{car.product_name}}</h5>
+              <p class="card-text">{{car.product_review|safe}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{car.product_year}}</li>
+            </ul>
+            <div class="card-body">
+              <a href="../cars_specifications/{{car.product_id}}" class="btn   mt-3" style="background-color: rgb(1, 1, 200);color: white;"><i
+                class="fas fa-chevron-right"></i></a>
+            </div>
+          </div></div>
+        {% endfor %}
+
+     </div>
+     {% endblock %}
